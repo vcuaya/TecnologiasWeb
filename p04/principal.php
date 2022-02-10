@@ -17,6 +17,8 @@
 
     random();
 
+    multiploRandom($numero);
+
     ?>
 </body>
 
