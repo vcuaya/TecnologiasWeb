@@ -9,10 +9,23 @@
 
 <body>
     <div>
+        <h2>Formulario 1</h2>
         <form action="5.php" method="post">
             Edad<input type="text" name="edad">
             Sexo<input type="text" name="sexo">
             <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <div>
+        <h2>Formulario 2</h2>
+        <?php
+        include '6.php';
+        mostrar();
+        ?>
+        <form action="6.php" method="post">
+            Matricula<input type="text" name="matricula">
+            <input type="submit" value="Mostrar">
         </form>
     </div>
 </body>
