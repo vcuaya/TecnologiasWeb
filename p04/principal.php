@@ -19,6 +19,8 @@
 
     multiploRandom($numero);
 
+    alfabeto();
+
     ?>
 </body>
 

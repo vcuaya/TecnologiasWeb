@@ -15,7 +15,7 @@ function multiplo($numero)
 function random()
 {
     $i = 0;
-    $matriz[][]=0;
+    //$matriz[][]=0;
     do {
         $matriz[$i][0] = rand(100, 999);
         $matriz[$i][1] = rand(100, 999);
@@ -37,8 +37,18 @@ function multiploRandom($numero)
         }
     }
 
-    do{
+    do {
         $multiplo = rand();
-    }while(!($multiplo % $numero == 0));
+    } while (!($multiplo % $numero == 0));
     echo 'El n&uacute;mero ' . $multiplo . ' es m&uacute;ltiplo de ' . $numero . '<br/>';
+}
+
+function alfabeto()
+{
+    for ($i = 97; $i <= 122; $i++) {
+        $letras[$i] = chr($i);
+    }
+    foreach ($letras as $indice => $valor) {
+        echo '[' . $indice . '] => ' . $valor . '<br/>';
+    }
 }
