@@ -64,7 +64,7 @@ if (!empty($id)) {
 					<td><?= $row['precio'] ?></td>
 					<td><?= $row['unidades'] ?></td>
 					<td><?= $row['detalles'] ?></td>
-					<td><img src=<?= $row['imagen'] ?>></td>
+					<td><img src=<?= $row['imagen'] ?> style="width: 200px; height: auto;"></td>
 				</tr>
 			</tbody>
 		</table>
