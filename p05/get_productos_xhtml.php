@@ -4,7 +4,7 @@
 if (isset($_GET['tope']))
 	$tope = $_GET['tope'];
 
-if (!empty($tope)) {
+if (!empty($tope) && is_int($tope)) {
 	/** SE CREA EL OBJETO DE CONEXION */
 	@$conexion = new mysqli('localhost', 'root', 'localhost', 'marketzone');
 
@@ -14,17 +14,9 @@ if (!empty($tope)) {
 		/** NOTA: con @ se suprime el Warning para gestionar el error por medio de código */
 	}
 
-	$sql="SELECT * FROM productos WHERE unidades <= '{$tope}'"; 
-    $result=$conexion->query($sql);
+	$sql = "SELECT * FROM productos WHERE unidades <= '{$tope}'";
 
-    // if($result->num_rows>0){
-    //     while($row=$result->fetch_assoc()){
-    //     echo $row["id"].'<br/>';
-    //     }
-    //     $result->free();
-    // }
-
-        /** útil para liberar memoria asociada a un resultado con demasiada información */
+	$result = $conexion->query($sql);
 
 	$conexion->close();
 }
@@ -58,28 +50,28 @@ if (!empty($tope)) {
 				</tr>
 			</thead>
 			<tbody>
-				<?php foreach($result as $producto):?>
+				<?php foreach ($result as $producto) : ?>
 					<?php
 					echo '<tr>';
-						echo '<th scope="row">'.$producto['id'].'</th>';
-						echo '<td>'.$producto['sku'].'</td>';
-						echo '<td>'.$producto['nombre'].'</td>';
-						echo '<td>'.$producto['marca'].'</td>';
-						echo '<td>'.$producto['modelo'].'</td>';
-						echo '<td>'.$producto['precio'].'</td>';
-						echo '<td>'.$producto['unidades'].'</td>';
-						echo '<td>'.$producto['detalles'].'</td>';
-						echo '<td><img src='.$producto['imagen'].' style="width: 200px; height: auto;"></td>';
+					echo '<th scope="row">' . $producto['id'] . '</th>';
+					echo '<td>' . $producto['sku'] . '</td>';
+					echo '<td>' . $producto['nombre'] . '</td>';
+					echo '<td>' . $producto['marca'] . '</td>';
+					echo '<td>' . $producto['modelo'] . '</td>';
+					echo '<td>' . $producto['precio'] . '</td>';
+					echo '<td>' . $producto['unidades'] . '</td>';
+					echo '<td>' . $producto['detalles'] . '</td>';
+					echo '<td><img src=' . $producto['imagen'] . ' style="width: 200px; height: auto;"></td>';
 					echo '</tr>';
 					?>
 				<?php endforeach; ?>
 			</tbody>
 		</table>
 
-	<?php else: ?>
+	<?php else : ?>
 
 		<script>
-			alert('El ID del producto no existe');
+			alert('No hay productos que coincidan con su criterio de busqueda');
 		</script>
 
 	<?php endif; ?>
