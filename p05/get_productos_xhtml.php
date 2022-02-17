@@ -27,13 +27,11 @@ if (is_numeric($tope)) {
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Producto</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 </head>
 
 <body>
 	<h3>PRODUCTO</h3>
-
-	<br />
 
 	<?php if (isset($result)) : ?>
 
@@ -63,7 +61,7 @@ if (is_numeric($tope)) {
 					echo '<td>' . $producto['precio'] . '</td>';
 					echo '<td>' . $producto['unidades'] . '</td>';
 					echo '<td>' . $producto['detalles'] . '</td>';
-					echo '<td><img src=' . $producto['imagen'] . ' style="width: 200px; height: auto;"></td>';
+					echo '<td><img src="' . $producto['imagen'] . '"' . 'alt="Producto" style="width: 200px; height: auto;"/></td>';
 					echo '</tr>';
 					?>
 				<?php endforeach; ?>
@@ -72,7 +70,7 @@ if (is_numeric($tope)) {
 
 	<?php else : ?>
 
-		<script>
+		<script type="text/javascript">
 			alert('No hay productos que coincidan con su criterio de busqueda');
 		</script>
 
