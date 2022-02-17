@@ -4,21 +4,23 @@
 if (isset($_GET['tope']))
 	$tope = $_GET['tope'];
 
-if (!empty($tope) && is_int($tope)) {
-	/** SE CREA EL OBJETO DE CONEXION */
-	@$conexion = new mysqli('localhost', 'root', 'localhost', 'marketzone');
+if (is_numeric($tope)) {
+	if (!empty($tope)) {
+		/** SE CREA EL OBJETO DE CONEXION */
+		@$conexion = new mysqli('localhost', 'root', 'localhost', 'marketzone');
 
-	/** comprobar la conexión */
-	if ($conexion->connect_errno) {
-		die('Falló la conexión: ' . $conexion->connect_error . '<br/>');
-		/** NOTA: con @ se suprime el Warning para gestionar el error por medio de código */
+		/** comprobar la conexión */
+		if ($conexion->connect_errno) {
+			die('Falló la conexión: ' . $conexion->connect_error . '<br/>');
+			/** NOTA: con @ se suprime el Warning para gestionar el error por medio de código */
+		}
+
+		$sql = "SELECT * FROM productos WHERE unidades <= '{$tope}'";
+
+		$result = $conexion->query($sql);
+
+		$conexion->close();
 	}
-
-	$sql = "SELECT * FROM productos WHERE unidades <= '{$tope}'";
-
-	$result = $conexion->query($sql);
-
-	$conexion->close();
 }
 ?>
 
