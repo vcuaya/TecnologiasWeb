@@ -42,7 +42,7 @@ if (empty($_POST['sku'])) {
         die('Falló la conexión: ' . $link->connect_error . '<br/>');
     }
 
-    $sql = "INSERT INTO productos VALUES (null, '{$_POST['sku']}', '{$_POST['nombre']}', '{$_POST['marca']}', '{$_POST['modelo']}', {$_POST['precio']}, '{$_POST['detalles']}', {$_POST['unidades']}, '{$_POST['imagen']}')";
+    $sql = "INSERT INTO productos VALUES (null, '{$_POST['sku']}', '{$_POST['nombre']}', '{$_POST['marca']}', '{$_POST['modelo']}', {$_POST['precio']}, '{$_POST['detalles']}', {$_POST['unidades']}, '{$_POST['imagen']}', 0)";
     if ($link->query($sql)) {
         $id = $link->insert_id;
     }
@@ -58,7 +58,12 @@ if (empty($_POST['sku'])) {
 </head>
 
 <body>
-    
+    <nav>
+        <ul>
+            <li><a href="formulario_productos.php">Agregar Productos</a></li>
+            <li><a href="get_productos_vigentes.php">Consultar Productos Vigentes</a></li>
+        </ul>
+    </nav>
     <?php if (isset($id)) : ?>
         <h1>Producto Registrado</h1>
         <fieldset>

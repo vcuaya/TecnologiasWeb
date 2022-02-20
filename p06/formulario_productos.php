@@ -8,7 +8,11 @@
 </head>
 
 <body>
-    
+    <nav>
+        <ul>
+            <li><a href="get_productos_vigentes.php">Consultar Productos Vigentes</a></li>
+        </ul>
+    </nav>
     <form action="set_producto_v2.php" method="post">
         <fieldset>
             <legend>Agregar producto</legend>
