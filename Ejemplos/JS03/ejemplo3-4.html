@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Ejemplo 1-7: Estructura condicional anidada</title>
+		<script type="text/javascript">
+			var nota1,nota2,nota3;
+
+			nota1 = prompt('Ingresa 1ra. nota:', '');
+			nota2 = prompt('Ingresa 2da. nota:', '');
+			nota3 = prompt('Ingresa 3ra. nota:', '');
+
+			//Convertimos los 3 string en enteros
+			nota1 = parseInt(nota1);
+			nota2 = parseInt(nota2);
+			nota3 = parseInt(nota3);
+
+			var pro; 
+			pro = (nota1+nota2+nota3)/3;
+
+			if ( pro >= 7 )
+			{
+			     document.write('aprobado');
+			}
+			else
+			{
+				if ( pro >= 4 )
+				{
+				     document.write('regular');
+				}
+				else
+				{
+				     document.write('reprobado');
+				}
+			}
+
+		</script>
+	</head>
+
+	<body>
+	</body>
+</html>
