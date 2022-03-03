@@ -37,6 +37,7 @@ if (is_numeric($tope)) {
 			var unidades = data[5].innerHTML;
 			var detalles = data[6].innerHTML;
 			var imagen = data[7].getAttribute("src");
+			console.log(imagen);
 			send2form(rowId, sku, nombre, marca, modelo, precio, unidades, detalles, imagen);
 		}
 
@@ -88,7 +89,7 @@ if (is_numeric($tope)) {
 					echo '<td class="datos">' . $producto['precio'] . '</td>';
 					echo '<td class="datos">' . $producto['unidades'] . '</td>';
 					echo '<td class="datos">' . $producto['detalles'] . '</td>';
-					echo '<td class="datos"><img src="' . $producto['imagen'] . '"' . 'alt="Producto" style="width: 200px; height: auto;"/></td>';
+					echo '<td><img class="datos" src="' . $producto['imagen'] . '"' . 'alt="Producto" style="width: 200px; height: auto;"/></td>';
 					echo '<td><input type="button" value="Editar" onclick="show()" /></td>';
 					echo '</tr>';
 					?>
