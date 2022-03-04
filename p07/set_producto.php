@@ -10,7 +10,6 @@ if ($link->connect_errno) {
 
 $sql = "UPDATE productos SET sku = '{$_POST['sku']}', nombre = '{$_POST['nombre']}', marca = '{$_POST['marca']}', modelo = '{$_POST['modelo']}', precio = {$_POST['precio']}, detalles = '{$_POST['detalles']}', unidades = {$_POST['unidades']}, imagen = '{$_POST['imagen']}' WHERE id = {$_POST['id']}";
 
-var_dump($_POST);
 if (!mysqli_query($link, $sql)) {
     echo 'No se pudo completar el registro';
 }
@@ -25,12 +24,6 @@ mysqli_close($link);
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="formulario_productos_v2.php">Agregar Productos</a></li>
-            <li><a href="get_productos_vigentes.php">Consultar Productos Vigentes</a></li>
-        </ul>
-    </nav>
     <?php if (isset($sql)) : ?>
         <h1>Producto Guardado</h1>
         <fieldset>

@@ -107,18 +107,13 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="get_productos_vigentes.php">Consultar Productos Vigentes</a></li>
-        </ul>
-    </nav>
     <form name="FormAgregarProducto" action="set_producto.php" method="post" id="formulario">
         <fieldset>
             <legend>Agregar producto</legend>
             <fieldset>
                 <legend>N&uacute;mero de parte y Nombre del producto</legend>
                 <ul>
-                    <li><label for="formID">ID</label><input type="text" name="id" id="id" maxlength="20" value="<?= $_GET['id'] ?>"></li>
+                    <li><label for="formID">ID</label><input type="text" name="id" id="id" maxlength="20" readonly value="<?= $_GET['id'] ?>"></li>
                     <li><label for="formSKU">SKU</label><input type="text" name="sku" id="sku" placeholder="DCPT700W" maxlength="25" autofocus value="<?= $_GET['sku'] ?>"></li>
                     <li><label for="formNombre">Nombre</label><input type="text" name="nombre" id="nombre" size="50" placeholder="Multifuncional Brother DCP-T700W" maxlength="100" value="<?= $_GET['nombre'] ?>"></li>
                 </ul>

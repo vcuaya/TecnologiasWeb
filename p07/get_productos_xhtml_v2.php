@@ -37,7 +37,6 @@ if (is_numeric($tope)) {
 			var unidades = data[5].innerHTML;
 			var detalles = data[6].innerHTML;
 			var imagen = data[7].getAttribute("src");
-			console.log(imagen);
 			send2form(rowId, sku, nombre, marca, modelo, precio, unidades, detalles, imagen);
 		}
 
