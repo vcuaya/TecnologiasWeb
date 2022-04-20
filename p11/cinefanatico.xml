@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cinefanatico SYSTEM "cinefanatico.dtd">
+
+<cinefanatico>
+    <tarjeta noserie="201935660" visitas="0" puntos="0">
+        <nombre>José Víctor Cuaya Contreras</nombre>
+        <correo>vcuaya@outlook.com</correo>
+        <telefono tipo="movil">222 121 5059</telefono>
+    </tarjeta>
+</cinefanatico>
