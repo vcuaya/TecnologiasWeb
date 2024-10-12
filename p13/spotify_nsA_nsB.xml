@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<A:Spotify version="1.0"
+    xmlns:A="http://www.spotify.com"
+    xmlns:B="http://www.totalplay.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.spotify.com spotify_v3_nsA.xsd http://www.totalplay.com spotify_v3_nsB.xsd">
+    <A:Cuenta id="1" plan="Premium" fechaIni="2022-02-01" fechaFin="2023-02-01">
+        <A:nombre>John Wick</A:nombre>
+        <A:correo>john011@gmail.com</A:correo>
+        <B:telefono tipo="movil">000 123 4567</B:telefono>
+        <B:telefono tipo="movil">222 333 4444</B:telefono>
+    </A:Cuenta>
+</A:Spotify>

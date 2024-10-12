@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tw="http://tecnologiasweb.com.mx" targetNamespace="http://tecnologiasweb.com.mx">
+
+    <xsd:attribute name="id" type="xsd:integer" />
+    <xsd:attribute name="plan" type="xsd:string" />
+    <xsd:attribute name="fechaIni" type="xsd:date" />
+    <xsd:attribute name="fechaFin" type="xsd:date" />
+    <xsd:attribute name="version" type="xsd:decimal" />
+    <xsd:attribute name="tipo" type="xsd:string" />
+    <xsd:element name="Nombre" type="xsd:string" />
+    <xsd:element name="Correo" type="xsd:string" />
+    <xsd:complexType mixed="true" name="TelefonoType">
+        <xsd:attribute ref="tw:tipo" use="required" />
+    </xsd:complexType>
+    <xsd:element name="Telefono" type="tw:TelefonoType"></xsd:element>
+    <xsd:complexType name="CuentaType">
+        <xsd:sequence maxOccurs="1">
+            <xsd:element ref="tw:Nombre" />
+            <xsd:element ref="tw:Correo" />
+            <xsd:element ref="tw:Telefono" />
+        </xsd:sequence>
+        <xsd:attribute use="required" ref="tw:id" />
+        <xsd:attribute ref="tw:plan" use="required" />
+        <xsd:attribute ref="tw:fechaIni" />
+        <xsd:attribute ref="tw:fechaFin" />
+    </xsd:complexType>
+    <xsd:element name="Cuenta" type="tw:CuentaType" />
+    <xsd:complexType name="SpotifyType">
+        <xsd:sequence maxOccurs="unbounded" minOccurs="1">
+            <xsd:element ref="tw:Cuenta" />
+        </xsd:sequence>
+        <xsd:attribute use="optional" ref="tw:version" />
+    </xsd:complexType>
+    <xsd:element name="Spotify" type="tw:SpotifyType" />
+</xsd:schema>

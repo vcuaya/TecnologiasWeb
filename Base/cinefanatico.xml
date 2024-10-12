@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cinefanatico SYSTEM "cinefanatico.dtd">
+<cinefanatico>
+    <tarjeta noserie="001" visitas="4" puntos="150">
+        <nombre>Hugo</nombre>
+        <correo>hugo.mcdonald@gmail.com</correo>
+        <telefono tipo="casa">222-123-4567</telefono>
+    </tarjeta>
+    <tarjeta noserie="002" visitas="2" puntos="75">
+        <nombre>Paco</nombre>
+        <correo>paco.mcdonald@gmail.com</correo>
+        <telefono tipo="casa">555-123-4567</telefono>
+        <telefono tipo="movil">555-223-3445</telefono>
+    </tarjeta>
+</cinefanatico>

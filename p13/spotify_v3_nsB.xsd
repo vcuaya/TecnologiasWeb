@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:B="http://www.totalplay.com"
+    targetNamespace="http://www.totalplay.com"
+    elementFormDefault="qualified" attributeFormDefault="unqualified">
+    
+    <xsd:element name="telefono">
+        <xsd:complexType>
+            <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                    <xsd:attribute name="tipo" type="xsd:string" use="required"/>
+                </xsd:extension>
+            </xsd:simpleContent>
+        </xsd:complexType>
+    </xsd:element>
+    
+</xsd:schema>

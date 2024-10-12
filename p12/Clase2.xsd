@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xsd:complexType name="personaType">
+        <xsd:sequence>
+            <xsd:element name="nombre" type="xsd:string"/>
+            <xsd:element name="apellidos" type="xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="documentType">
+        <xsd:all>
+            <xsd:element name="persona" type="personaType"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:element name="documento" type="documentType"/>
+</xsd:schema>

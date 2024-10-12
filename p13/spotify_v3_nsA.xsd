@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:A="http://www.spotify.com"
+    targetNamespace="http://www.spotify.com"
+    elementFormDefault="qualified" attributeFormDefault="unqualified">       
+    
+    <xsd:element name="Spotify">
+        <xsd:complexType>
+            <xsd:sequence maxOccurs="1">
+                <xsd:element maxOccurs="unbounded" minOccurs="1" name="Cuenta">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="nombre" type="xsd:string"/>
+                            <xsd:element name="correo" type="xsd:string"/>
+                            <xsd:any minOccurs="0" maxOccurs="2"/>
+                        </xsd:sequence>
+                        <xsd:attribute name="id" type="xsd:string" use="required"/>
+                        <xsd:attribute name="plan" type="xsd:string" use="required"/>
+                        <xsd:attribute name="fechaIni" type="xsd:string" use="optional"/>
+                        <xsd:attribute name="fechaFin" type="xsd:string"/>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="version" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    
+</xsd:schema>
+

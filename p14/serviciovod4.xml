@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="catalogovod.xsl" type="text/xsl"?>
+<CatalogoVOD Version="2.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="serviciovod4.xsd">
+    <cuenta correo="vcuaya@outlook.com">
+        <perfiles>
+            <perfil usuario="Sha" idioma="Spanish" />
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas region="MEX">
+            <genero nombre="Drama">
+                <titulo duracion="1h 42m">Casablanca</titulo>
+                <titulo duracion="1h 59m">Citizen Kane</titulo>
+                <titulo duracion="2h 12m">Parasite</titulo>
+                <titulo duracion="2h 10m">Knives Out</titulo>
+            </genero>
+            <genero nombre="Suspenso">
+                <titulo duracion="1h 56m">Us</titulo>
+                <titulo duracion="1h 44m">Get Out</titulo>
+                <titulo duracion="1h 9m">The Cabinet of Dr. Caligari</titulo>
+                <titulo duracion="1h 30m">A Quiet Place</titulo>
+            </genero>
+        </peliculas>
+        <series region="MEX">
+            <genero nombre="Drama">
+                <titulo duracion="0h 45m">Defending Jacob</titulo>
+                <titulo duracion="0h 53m">Slow Horses</titulo>
+                <titulo duracion="0h 49m">The Last Days of Ptolemy Grey</titulo>
+                <titulo duracion="1h 3m">The Morning Show</titulo>
+            </genero>
+            <genero nombre="Suspenso">
+                <titulo duracion="0h 57m">Severance</titulo>
+                <titulo duracion="0h 50m">Tehran</titulo>
+                <titulo duracion="0h 44m">Suspicion</titulo>
+                <titulo duracion="0h 34m">Servant</titulo>
+            </genero>
+        </series>
+    </contenido>
+</CatalogoVOD>

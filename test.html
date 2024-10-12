@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulario con Ajax</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="formulario">
+        <form method="post" id="formdata">
+            <label for="nombre">Nombre: </label><input type="text" name="nombre" id="nombre" required="required"></br>
+            <label for="apellidos">Apellidos: </label><input type="text" name="apellidos" id="apellidos"
+                required="required"></br>
+            <label for="direccion">Dirección: </label><input type="text" name="direccion" id="direccion"
+                required="required"></br>
+            Género: <input type="radio" name="genero" id="hombre" checked="checked"><label for="hombre"> Hombre -
+            </label><input type="radio" name="genero" id="mujer"><label for="mujer"> Mujer</label>
+            <label for="mayor">Es mayor de 18 años: </label><input type="checkbox" name="mayor" id="mayor"
+                required="required">
+            <input type="button" id="botonenviar" value="Enviar">
+        </form>
+    </div>
+    <div id="exito" style="display:none">
+        Sus datos han sido recibidos con éxito.
+    </div>
+    <div id="fracaso" style="display:none">
+        Se ha producido un error durante el envío de datos.
+    </div>
+</body>
+
+<script src="./test.js"></script>
+
+</html>

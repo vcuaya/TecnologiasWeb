@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CatalogoVOD SYSTEM "serviciovod.dtd">
+<CatalogoVOD>
+    <cuenta correo="andres.manuel@presidencia.gob.mx">
+        <perfiles>
+            <perfil usuario="Andrés" idioma="Español" />
+            <perfil usuario="Beatriz" idioma="Español" />
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero nombre="Super Héroes">
+                <titulo duracion="2:37">ETERNALS</titulo>
+                <titulo duracion="2:04">CAPITAN AMÉRICA, EL 1ER VENGADOR</titulo>
+            </genero>
+            <genero nombre="Animadas">
+                <titulo duracion="1:40">RED</titulo>
+                <titulo duracion="1:47">RAYA</titulo>
+            </genero>
+        </peliculas>
+        <programas>
+            <genero nombre="Comedia">
+                <titulo duracion="0:30">FRIENDS</titulo>
+                <titulo duracion="0:40">HOW I MEET YOUR MOTHER</titulo>
+            </genero>
+            <genero nombre="Suspenso">
+                <titulo duracion="0:30">Stranger Things</titulo>
+                <titulo duracion="0:45">Criminal Minds</titulo>
+            </genero>
+        </programas>
+    </contenido>
+</CatalogoVOD>

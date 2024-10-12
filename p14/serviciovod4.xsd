@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+    <xsd:simpleType name="correoType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[^@]+@[^\.]+\..+"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="region">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="ARG"/>
+            <xsd:enumeration value="ESP"/>
+            <xsd:enumeration value="KOR"/>
+            <xsd:enumeration value="MEX"/>
+            <xsd:enumeration value="USA"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:attributeGroup name="perfilAttribute">
+        <xsd:attribute name="usuario" use="required"/>
+        <xsd:attribute name="idioma" use="required"/>
+    </xsd:attributeGroup>
+    <xsd:complexType name="perfilType">
+        <xsd:attributeGroup ref="perfilAttribute"/>
+    </xsd:complexType>
+    <xsd:complexType name="perfilesType">
+        <xsd:sequence maxOccurs="unbounded">
+            <xsd:element name="perfil" type="perfilType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="cuentaType">
+        <xsd:sequence>
+            <xsd:element name="perfiles" type="perfilesType"/>
+        </xsd:sequence>
+        <xsd:attribute name="correo" type="correoType" use="required"/>
+    </xsd:complexType>
+    <xsd:complexType name="CatalogoVODtype">
+        <xsd:sequence>
+            <xsd:element name="cuenta" type="cuentaType"/>
+            <xsd:element name="contenido" type="contenidoType"/>
+        </xsd:sequence>
+        <xsd:attribute name="Version" type="xsd:decimal" use="required"/>
+    </xsd:complexType>
+    <xsd:complexType name="tituloType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="duracion" type="xsd:string" use="required"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="generoType">
+        <xsd:sequence maxOccurs="unbounded">
+            <xsd:element name="titulo" type="tituloType"/>
+        </xsd:sequence>
+        <xsd:attribute name="nombre" type="xsd:string" use="required"/>
+    </xsd:complexType>
+    <xsd:complexType name="programasType">
+        <xsd:sequence maxOccurs="unbounded">
+            <xsd:element name="genero" type="generoType"/>
+        </xsd:sequence>
+        <xsd:attribute name="region" type="region" use="required"/>
+    </xsd:complexType>
+    <xsd:complexType name="contenidoType">
+        <xsd:sequence>
+            <xsd:element name="peliculas" type="programasType"/>
+            <xsd:element name="series" type="programasType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="CatalogoVOD" type="CatalogoVODtype"/>
+</xsd:schema>
